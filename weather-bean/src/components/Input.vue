@@ -19,8 +19,7 @@ export default {
   },
   methods: {
       sendData: function() {
-          var app = app
-          app.city = "Searching..."
+          var app = this
           axios.get('https://www.metaweather.com/api/location/search/?query=' + app.city)
             .then(function(response) {
                 app.city = response.data.title
